@@ -178,6 +178,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Repository Service Provider
+         */
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
     ],
 
     /*
