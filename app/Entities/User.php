@@ -19,7 +19,8 @@ class User extends Authenticatable implements Transformable
     protected $hidden = [
         'password',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'remember_token'
     ];
 
     protected $primaryKey = 'id';

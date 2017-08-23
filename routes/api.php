@@ -21,4 +21,8 @@ use Illuminate\Http\Request;
 Route::group(['namespace' => 'V1', 'prefix' => 'v1'], function (){
 
     Route::post('login', ['as' => 'login' , 'uses' => 'LoginController@login']);
+
+    Route::group(['prefix' => 'user', 'middleware' => ['jwt-auth']], function (){
+        Route::get('profile', ['as' => 'user.profile', 'uses' => 'UserController@profile']);
+    });
 });
